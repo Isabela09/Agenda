@@ -1,0 +1,40 @@
+<?php
+if(!empty($_POST)) {
+	if ( !empty ($_POST['FirstName']) && 
+		!empty($_POST['LastName']) && 
+		!empty($_POST['Email'])  && 
+		!empty($_POST['UserName']) && 
+		!empty($_POST['Password']) && 
+		!empty($_POST['PasswordVerify']))
+	 {
+		$fname = $_POST['FirstName'];
+		$lname = $_POST['LastName'];
+		$email = $_POST['Email'];
+		$username = $_POST['UserName'];
+		$password = $_POST['Password'];
+		$passwordv = $_POST['PasswordVerify'];
+		$crypt = md5(trim($password));
+		$crypt2 = md5(trim($passwordv));
+		
+		$mysqli = new mysqli ("localhost" , "root" , "" , "phonebook");
+		$sqlString = "SELECT Email FROM contactdetails WHERE Email = '{$email}'";
+		$email = $mysqli->query($sqlString);
+		
+		if($email->num_rows > 0) {
+			$_SESSION['messages'][] = "Email already exists!";
+		} else if ($crypt != $crypt2) {
+			$_SESSION['messages'][] = 'Password doesn\'t match';
+		} else {
+			$last_id = $mysqli->query ("INSERT INTO contactdetails (firstname, lastname, email) VALUES ('$fname', '$lname', '$email')");
+			$mysqli->query ("INSERT INTO account (AccountId, UserName, Password) VALUES ('{$last_id}', '$username', '$crypt')");
+			$_SESSION['messages'][] = 'Account '.$username.'  created';
+			header('Location: login.php';
+		}
+		$mysqli->close();
+	} else {
+		if(!empty($_SESSION['messages'])) {
+			$_SESSION['messages'] = null;
+		}
+		$_SESSION['messages'][] = 'Please fill in all the fields';
+	}
+}

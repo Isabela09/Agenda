@@ -1,0 +1,68 @@
+	#sectionLeft {
+		background-color:#C2C2D6;
+		height: 200px;
+		float:left;
+		width:30%;
+		display:block;
+		padding-right:50;
+		padding-left:50;
+		}
+	#sectionLeft2 {
+		background-color:#C2C2D6;
+		position: relative;
+		float:left;
+		width: 20%;
+		}	
+		
+	#sectionCenter{
+		background-color: #C2C2D6;
+		float:left;
+		padding-right:10;
+		padding-left:10;
+		width:30%;
+		display:block;
+		
+			}
+			
+	#sectionRight{
+		background-color:#C2C2D6;
+		height: 200px;
+		float:left;
+		width:30%;
+		display:block;
+		}
+		
+	#sections{
+		background-color:#C2C2D6;
+		}
+		
+	.clearfix{
+		clear: both;
+		}
+	
+
+
+
+
+.login {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 20px 20px;
+  width: 310px;
+  background: white;
+
+  }
+  
+  .container {
+  margin: 80px auto;
+  width: 640px;
+}
+.login-help {
+  margin: 20px 0;
+  font-size: 11px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px #2a85a1;
+}
+
+

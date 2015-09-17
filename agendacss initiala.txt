@@ -1,0 +1,91 @@
+
+#header {
+    background-color:LightGray  ;
+    color:red  ;
+    text-align:center;
+	height: 10px;
+	display:block;
+	float:left;
+	padding-right:50;
+	padding-left:50;
+}
+	
+#sections{
+		background-color:lightgreen;
+		}
+	
+#sectionCenter{
+		color: blue;
+		float:left;
+		background-color: white;
+		padding-right:10;
+		padding-left:4;
+		width:15%;
+		}
+#sectionLeft {
+	color: black;
+	height: 300px;
+	float:left;
+	width:30%;
+	display:block;
+	padding-right:50;
+	padding-left:50;
+	}
+#sectionRight {
+	color: black;
+	height: 300px;
+	float:right;
+	width:30%;
+	display:block;
+	padding-right:50;
+	padding-left:50;
+	}
+h3 {
+	color: black;
+}
+
+.left{
+	color: blue;
+	text-align:left;
+}
+.a{
+	list-style-type:square;
+}
+
+.main{
+	text-align:justify;
+}
+
+#nav {
+    background-color:pink;
+    float:left;
+   text-align:left;	
+   width:300px;
+   height:300px;
+}
+
+
+
+
+.login {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 20px 20px;
+  width: 310px;
+  background: white;
+
+  }
+  
+  .container {
+  margin: 80px auto;
+  width: 640px;
+}
+.login-help {
+  margin: 20px 0;
+  font-size: 11px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px #2a85a1;
+}
+
+
